@@ -40,7 +40,7 @@ MtAccount >> gtSitesFor: aView [
 	<gtView>
 	^ aView forward
 		title: 'Sites';
-		priority: 30;
+		priority: 1;
 		object: [ self sites ];
 		view: #gtItemsFor:
 ]
