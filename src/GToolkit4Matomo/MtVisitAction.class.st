@@ -16,6 +16,14 @@ MtVisitAction >> gtDisplayOn: aStream [
 	aStream nextPutAll: self title
 ]
 
+{ #category : 'gt-extensions' }
+MtVisitAction >> gtWebViewFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'WebView';
+		stencil: [ GtWebViewElement new url: self url ]
+]
+
 { #category : 'accessing' }
 MtVisitAction >> serverTimePretty [
 	^ self at: 'serverTimePretty' ifAbsent: [ '' ]
